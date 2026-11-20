@@ -1,2 +1,18 @@
 node_modules/
 dist/
+
+# Unity (unity/DeadAir)
+unity/DeadAir/[Ll]ibrary/
+unity/DeadAir/[Tt]emp/
+unity/DeadAir/[Oo]bj/
+unity/DeadAir/[Bb]uild/
+unity/DeadAir/[Bb]uilds/
+unity/DeadAir/[Ll]ogs/
+unity/DeadAir/[Uu]ser[Ss]ettings/
+unity/DeadAir/*.csproj
+unity/DeadAir/*.sln
+*.apk
+*.aab
+# Blender autosaves
+*.blend1
+*.blend2
