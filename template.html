@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEAD AIR test build</title>
+<style>
+/* VOICE: a late-night public-access station that should not be on the air
+   IDEA: the menu is a VHS tape label / station slate
+   PICTURE: the live 3D station behind the slate
+   COLOUR and TYPE: real black, CRT blue, sodium orange; Courier like a 1994 typewriter slate
+   LAYOUT: one centered slate card over the scene */
+html,body{margin:0;height:100%;background:#000;color:#e9e2c8;font:16px/1.5 "Courier New",Courier,monospace;overflow:hidden}
+canvas{display:block}
+#menu{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,rgba(0,10,40,.55),rgba(0,0,0,.92));padding:16px;box-sizing:border-box}
+.slate{max-width:620px;width:100%;background:#0b0d14;border:2px solid #2b3a6b;box-shadow:0 0 0 6px #000,0 0 40px rgba(60,90,255,.25);padding:26px 26px 20px}
+h1{margin:0;font-size:clamp(40px,8vw,64px);line-height:1;letter-spacing:2px;color:#f2ead0;text-shadow:3px 0 rgba(255,0,60,.45),-3px 0 rgba(0,160,255,.45)}
+.tag{color:#ff9a3a;margin:6px 0 18px;font-weight:bold}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+button{flex:1 1 200px;min-height:52px;font:bold 18px "Courier New",monospace;background:#1a2a6a;color:#fff;border:2px solid #6f8cff;cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible{outline:3px solid #ff9a3a;outline-offset:2px}
+#desk{background:#222;border-color:#888}
+label{display:flex;gap:10px;align-items:center;cursor:pointer}
+input[type=checkbox]{width:22px;height:22px}
+.controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;font-size:14px;color:#c9c2a8;border-top:1px solid #2b3a6b;padding-top:12px;margin-top:8px}
+.controls b{color:#ff9a3a}
+#note{font-size:13px;color:#9aa;margin-top:10px}
+@media(max-width:560px){.controls{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div id="menu"><div class="slate">
+  <h1>DEAD AIR</h1>
+  <div class="tag">WKRT CHANNEL 9 &middot; NOV 19 1994 &middot; TEST BUILD</div>
+  <p style="margin:0">The station went off the air mid-broadcast. You and three crew mates have until 6:00 AM to get it back on. One of them is not who they look like. Only the camcorder shows its real face.</p>
+  <div class="row">
+    <button id="vr" disabled>VR NOT AVAILABLE</button>
+    <button id="desk">PLAY ON DESKTOP</button>
+  </div>
+  <label><input type="checkbox" id="low"> Lower intensity (softer scare, no loud sting)</label>
+  <div class="controls">
+    <div><b>QUEST</b><br>Left stick: move<br>Right stick: snap turn<br>Right trigger: use what you point at<br>Right grip: flashlight on/off<br>Left trigger: record (camcorder)<br>X or A: call a crew mate to you<br>Walkie screen is on your left wrist</div>
+    <div><b>DESKTOP</b><br>WASD: move, mouse: look<br>Click or E: use<br>Hold right mouse: raise camcorder<br>Hold R: record<br>F: flashlight, Q: call a crew mate<br>Esc: free the mouse</div>
+  </div>
+  <div id="note">Win: do the 3 jobs and reach the van, or record the Host's real face for 3 seconds and burn the tape in the furnace. Headphones recommended.</div>
+</div></div>
+<script>/*__BUNDLE__*/</script>
+</body>
+</html>
